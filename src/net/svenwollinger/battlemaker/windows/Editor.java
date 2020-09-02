@@ -28,7 +28,7 @@ import net.svenwollinger.battlemaker.utils.Texture;
 import net.svenwollinger.battlemaker.utils.Tool;
 import net.svenwollinger.battlemaker.windows.editor.EditorMapProperties;
 import net.svenwollinger.battlemaker.windows.editor.EditorTextureViewer;
-import net.svenwollinger.battlemaker.windows.editor.EditorWindowMain;
+import net.svenwollinger.battlemaker.windows.editor.EditorWindow;
 
 public class Editor {
 	public Map currentMap = null;
@@ -48,7 +48,7 @@ public class Editor {
 	public Texture selectedTexture = null;
 	public Entity selectedEntity = null;
 	
-	public EditorWindowMain mainWindow;
+	public EditorWindow mainWindow;
 	public EditorTextureViewer textureViewer;
 	public EditorMapProperties propertiesWindow = null;
 	
@@ -61,7 +61,7 @@ public class Editor {
 	public Editor() {
 		final int w = 32, h = 32;
 		
-		mainWindow = new EditorWindowMain(this);
+		mainWindow = new EditorWindow(this);
 		currentMap = new Map(w,h, this, 3);
 		textureViewer = new EditorTextureViewer(this);
 		textureViewer.setLocation(mainWindow.getWidth(), 0);

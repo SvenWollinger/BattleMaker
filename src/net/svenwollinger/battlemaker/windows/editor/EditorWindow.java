@@ -11,7 +11,7 @@ import net.svenwollinger.battlemaker.input.editor.EditorMouseMotionListener;
 import net.svenwollinger.battlemaker.input.editor.EditorMouseWheelListener;
 import net.svenwollinger.battlemaker.windows.Editor;
 
-public class EditorWindowMain extends JFrame{
+public class EditorWindow extends JFrame{
 
 	private static final long serialVersionUID = 1L;
 	
@@ -21,7 +21,7 @@ public class EditorWindowMain extends JFrame{
 	
 	public Editor editorInstance;
 	
-	public EditorWindowMain(Editor _editor) {
+	public EditorWindow(Editor _editor) {
 		editorInstance = _editor;
 		init();
 	}

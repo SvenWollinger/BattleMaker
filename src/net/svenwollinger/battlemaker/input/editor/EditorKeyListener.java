@@ -4,13 +4,13 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 import net.svenwollinger.battlemaker.map.Map;
-import net.svenwollinger.battlemaker.windows.editor.EditorWindowMain;
+import net.svenwollinger.battlemaker.windows.editor.EditorWindow;
 
 public class EditorKeyListener implements KeyListener{
 
-	EditorWindowMain wndInstance;
+	EditorWindow wndInstance;
 	
-	public EditorKeyListener(EditorWindowMain _instance) {
+	public EditorKeyListener(EditorWindow _instance) {
 		this.wndInstance = _instance;
 	}
 	

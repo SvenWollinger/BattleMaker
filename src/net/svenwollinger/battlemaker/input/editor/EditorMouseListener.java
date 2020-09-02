@@ -5,13 +5,13 @@ import java.awt.event.MouseListener;
 
 import net.svenwollinger.battlemaker.map.Entity;
 import net.svenwollinger.battlemaker.windows.Editor;
-import net.svenwollinger.battlemaker.windows.editor.EditorWindowMain;
+import net.svenwollinger.battlemaker.windows.editor.EditorWindow;
 
 public class EditorMouseListener implements MouseListener{
 
-	EditorWindowMain wndInstance;
+	EditorWindow wndInstance;
 	
-	public EditorMouseListener(EditorWindowMain _instance) {
+	public EditorMouseListener(EditorWindow _instance) {
 		wndInstance = _instance;
 	}
 	

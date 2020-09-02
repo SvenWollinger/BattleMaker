@@ -8,13 +8,13 @@ import javax.swing.SwingUtilities;
 
 import net.svenwollinger.battlemaker.utils.Texture;
 import net.svenwollinger.battlemaker.utils.Tool;
-import net.svenwollinger.battlemaker.windows.editor.EditorWindowMain;
+import net.svenwollinger.battlemaker.windows.editor.EditorWindow;
 
 public class EditorMouseMotionListener implements MouseMotionListener{
 
-	EditorWindowMain wndInstance;
+	EditorWindow wndInstance;
 	
-	public EditorMouseMotionListener(EditorWindowMain _instance) {
+	public EditorMouseMotionListener(EditorWindow _instance) {
 		wndInstance = _instance;
 	}
 	

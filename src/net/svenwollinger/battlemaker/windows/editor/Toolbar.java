@@ -14,7 +14,7 @@ import net.svenwollinger.battlemaker.utils.ToolButton;
 public class Toolbar extends JPanel{
 	private static final long serialVersionUID = -1508396539941790776L;
 	
-	public EditorWindowMain wndInstance;
+	public EditorWindow wndInstance;
 	
 	ToolButton selectButton;
 	ToolButton tileButton;
@@ -25,7 +25,7 @@ public class Toolbar extends JPanel{
 	
 	LayerViewer layerViewer;
 	
-	public Toolbar(EditorWindowMain _instance) {
+	public Toolbar(EditorWindow _instance) {
 		wndInstance = _instance;
 		
 		selectButton = new ToolButton("Select", this, Tool.SELECT);

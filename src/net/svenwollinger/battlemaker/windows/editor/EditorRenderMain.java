@@ -15,9 +15,9 @@ public class EditorRenderMain extends JPanel{
 	
 	private static final long serialVersionUID = 1L;
 	
-	EditorWindowMain wndInstance;
+	EditorWindow wndInstance;
 	
-	public EditorRenderMain(EditorWindowMain _instance) {
+	public EditorRenderMain(EditorWindow _instance) {
 		this.wndInstance = _instance;
 	}
 

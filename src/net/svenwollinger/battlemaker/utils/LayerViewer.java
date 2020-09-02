@@ -6,14 +6,14 @@ import java.awt.Graphics;
 import java.awt.Rectangle;
 import javax.swing.JPanel;
 import net.svenwollinger.battlemaker.Utils;
-import net.svenwollinger.battlemaker.windows.editor.EditorWindowMain;
+import net.svenwollinger.battlemaker.windows.editor.EditorWindow;
 
 public class LayerViewer extends JPanel{
 	private static final long serialVersionUID = 4070287462570677903L;
 
-	EditorWindowMain wndInstance;
+	EditorWindow wndInstance;
 	
-	public LayerViewer(EditorWindowMain _wndInstance) {
+	public LayerViewer(EditorWindow _wndInstance) {
 		wndInstance = _wndInstance;
 	}
 

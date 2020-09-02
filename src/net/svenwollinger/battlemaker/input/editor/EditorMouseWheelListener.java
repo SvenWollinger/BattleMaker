@@ -3,13 +3,13 @@ package net.svenwollinger.battlemaker.input.editor;
 import java.awt.event.MouseWheelEvent;
 import java.awt.event.MouseWheelListener;
 
-import net.svenwollinger.battlemaker.windows.editor.EditorWindowMain;
+import net.svenwollinger.battlemaker.windows.editor.EditorWindow;
 
 public class EditorMouseWheelListener implements MouseWheelListener{
 
-EditorWindowMain wndInstance;
+EditorWindow wndInstance;
 	
-	public EditorMouseWheelListener(EditorWindowMain _instance) {
+	public EditorMouseWheelListener(EditorWindow _instance) {
 		wndInstance = _instance;
 	}
 	

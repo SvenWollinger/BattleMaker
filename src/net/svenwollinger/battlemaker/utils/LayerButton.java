@@ -8,17 +8,17 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 
-import net.svenwollinger.battlemaker.windows.editor.EditorWindowMain;
+import net.svenwollinger.battlemaker.windows.editor.EditorWindow;
 
 public class LayerButton extends JButton{
 	private static final long serialVersionUID = 4843305725405576790L;
 
-	EditorWindowMain wndInstance;
+	EditorWindow wndInstance;
 	int dir = 0;
 	
 	Image img;
 	
-	public LayerButton(int _dir, EditorWindowMain _wndInstance) {
+	public LayerButton(int _dir, EditorWindow _wndInstance) {
 		dir = _dir;
 		wndInstance = _wndInstance;
 			
