@@ -140,7 +140,7 @@ public class Map {
 				for(int i = 0; i < layers.size(); i++) {
 					Texture txt = layers.get(i)[x][y];
 					if(txt != null) {
-						Image imgTemp = editorInstance.missingTexture.getImage();
+						Image imgTemp = editorInstance.res.missingTexture.getImage();
 						if(texturePacks.get(txt.texturePackID) != null) {
 							imgTemp = texturePacks.get(txt.texturePackID).getImage(txt.texture);
 						}

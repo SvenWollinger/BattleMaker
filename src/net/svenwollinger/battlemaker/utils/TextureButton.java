@@ -45,13 +45,12 @@ public class TextureButton extends JButton{
 		int stroke = 1;
 		Stroke oldStroke = g2.getStroke();
 		g2.setStroke(new BasicStroke(stroke));
-		if(editorInstance.selectedTexture != null)
+		if(editorInstance.selectedTexture != null) {
 			if(editorInstance.selectedTexture.texture.equals(texture.texture) && editorInstance.selectedTexture.texturePackID == texture.texturePackID) {
 				stroke = 4;
 				g2.setStroke(new BasicStroke(stroke));
 			}
-				//g2.drawRect(0, 0, this.getWidth(), this.getHeight());
-		
+		}
 		g2.drawRect(stroke, stroke, this.getWidth() - stroke*2, this.getHeight() - stroke*2);
 		g2.setStroke(oldStroke);
 	}

@@ -12,7 +12,6 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
 import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
@@ -20,6 +19,7 @@ import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
+import net.svenwollinger.battlemaker.StaticResources;
 import net.svenwollinger.battlemaker.map.Entity;
 import net.svenwollinger.battlemaker.map.Map;
 import net.svenwollinger.battlemaker.map.MapSave;
@@ -56,8 +56,7 @@ public class Editor {
 	
 	Editor instance;
 	
-	public final ImageIcon missingEntTexture = new ImageIcon(getClass().getResource("/net/svenwollinger/res/missingEnt.png"));
-	public final ImageIcon missingTexture = new ImageIcon(getClass().getResource("/net/svenwollinger/res/missing.png"));	
+	public StaticResources res = new StaticResources();
 	
 	public Editor() {
 		final int w = 32, h = 32;
@@ -298,20 +297,12 @@ public class Editor {
 		switch (direction) {
 			case 1:
 				if(currentLayer < (currentMap.layers.size()-1)) currentLayer++;
-				mainWindow.toolbar.setLayer(currentLayer);
 				break;
 			case -1:
 				if(currentLayer > 0) currentLayer--;
-				mainWindow.toolbar.setLayer(currentLayer);
 				break;
 		}
-	}
-	
-	public void setLayer(int layer) {
-		if(layer >= 0 && layer < currentMap.layers.size()) {
-			currentLayer = layer;
-			mainWindow.toolbar.setLayer(currentLayer);
-		}
+		mainWindow.toolbar.repaintButtons();
 	}
 	
 	public void saveMap(boolean forceDialog) {

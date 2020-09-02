@@ -71,7 +71,7 @@ public class EditorRenderMain extends JPanel{
 					if(tileX >= 0 && tileY >= 0 && tileX < cMap.getWidth() && tileY < cMap.getHeight()) {
 						for(int i = 0; i < cMap.layers.size(); i++) {
 							final Texture txt = cMap.layers.get(i)[tileX][tileY];
-							Image img = wndInstance.editorInstance.missingTexture.getImage();
+							Image img = wndInstance.editorInstance.res.missingTexture.getImage();
 						
 							if(txt != null) {
 								if(cMap.texturePacks.get(txt.texturePackID) != null) {

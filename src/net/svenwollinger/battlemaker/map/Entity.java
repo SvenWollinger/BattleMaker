@@ -31,7 +31,7 @@ public class Entity implements Serializable{
 		final int addY = (int) (tileSize - (sizeY * tileSize)) /2;
 		
 		final Texture txt = texture;
-		Image imgTemp = _editor.missingEntTexture.getImage();
+		Image imgTemp = _editor.res.missingEntTexture.getImage();
 	
 		if(txt != null) {
 			if(_editor.currentMap.texturePacks.get(txt.texturePackID) != null) {
