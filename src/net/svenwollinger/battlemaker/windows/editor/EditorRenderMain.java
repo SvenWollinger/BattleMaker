@@ -1,6 +1,7 @@
 package net.svenwollinger.battlemaker.windows.editor;
 
 import java.awt.BasicStroke;
+import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -23,7 +24,11 @@ public class EditorRenderMain extends JPanel{
 
 	@Override
 	public void paint(Graphics g) {
+		g.setColor(Color.LIGHT_GRAY);
+		g.fillRect(0, 0, this.getWidth(), this.getHeight());
+		g.setColor(Color.BLACK);
 		if(wndInstance.editorInstance.currentMap != null) {
+			
 			String loadedMap = "New Map";
 			String loadedMapIsSaved = "*";
 			if(wndInstance.editorInstance.currentMapIsSaved) loadedMapIsSaved = "";
@@ -38,6 +43,10 @@ public class EditorRenderMain extends JPanel{
 			final int transY = wndInstance.editorInstance.getTransY();
 		
 			g.translate(transX, transY);
+			
+			g.setColor(Color.WHITE);
+			g.fillRect(0, 0, cMap.getWidth() * tileSize, cMap.getHeight() * tileSize);
+			g.setColor(Color.BLACK);
 			
 			float tileAmountTemp = (wndInstance.editorInstance.tiles + wndInstance.editorInstance.getTilesSafety()) / 2;
 			
