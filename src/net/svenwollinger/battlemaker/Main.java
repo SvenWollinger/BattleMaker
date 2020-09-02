@@ -7,7 +7,7 @@ import net.svenwollinger.battlemaker.windows.MenuWindow;
 
 public class Main {
 
-	public static String version = "20200901_1";
+	public static String version = "20200902_1";
 	
 	public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException {
 		UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
